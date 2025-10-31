@@ -31,5 +31,14 @@ with st.sidebar:
   bill_depth_mm = st.slider("bill depth in mm", df.bill_depth_mm.min(),df.bill_depth_mm.max(),df.bill_depth_mm.mean())
   flipper_length_mm = st.slider("flipper lenght in mm", float(df.flipper_length_mm.min()),float(df.flipper_length_mm.max()),float(df.flipper_length_mm.mean()))
   body_mass_g = st.slider("body mass in g", float(df.body_mass_g.min()), float(df.body_mass_g.max()),float(df.body_mass_g.mean()))
+  data ={
+          'island',island,
+          'bill_length_mm',bill_lenght_mm,
+          'bill_depth_mm',bill_depth_mm,
+          'flipper_length_mm',flipper_length_mm,
+          'body_mass_g',body_mass_g,
+          'sex',sex
+        }
+  input_df = pd.dataframe(data, index=[0])
 
-
+input_df
