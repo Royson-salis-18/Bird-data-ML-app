@@ -32,13 +32,13 @@ with st.sidebar:
   flipper_length_mm = st.slider("flipper lenght in mm", float(df.flipper_length_mm.min()),float(df.flipper_length_mm.max()),float(df.flipper_length_mm.mean()))
   body_mass_g = st.slider("body mass in g", float(df.body_mass_g.min()), float(df.body_mass_g.max()),float(df.body_mass_g.mean()))
   data ={
-          'island',island,
-          'bill_length_mm',bill_length_mm,
-          'bill_depth_mm',bill_depth_mm,
-          'flipper_length_mm',flipper_length_mm,
-          'body_mass_g',body_mass_g,
-          'sex',sex
+          'island':island,
+          'bill_length_mm':bill_length_mm,
+          'bill_depth_mm':bill_depth_mm,
+          'flipper_length_mm':flipper_length_mm,
+          'body_mass_g':body_mass_g,
+          'sex':sex
         }
-  input_df = pd.dataframe(data, index=[0])
-
-input_df
+  input_df = pd.DataFrame(data, index=[0])
+  input_penguins = pd.concat([input_df,X],axis=0)
+input_penguins
