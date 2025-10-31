@@ -27,4 +27,4 @@ with st.sidebar:
       "island",
     ("Bisco","Dream","Torgersen"))
   sex = st.selectbox("Gender",("male","female"))
-  bill_length_mm = st.slider("bill lenght in mm", df.bill_length_mm.min(),df.bill_length_mm.mean(),df.bill_length_mm.max())
+  bill_length_mm = st.slider("bill lenght in mm", df.bill_length_mm.min(),df.bill_length_mm.max(),df.bill_length_mm.mean())
