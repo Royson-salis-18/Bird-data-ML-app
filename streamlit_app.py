@@ -14,5 +14,5 @@ with st.expander("Data"):
   X
 
   st.write('**y**')
-  y = df.species
-  y.unique()
+  y = df.species.unique()
+  y
