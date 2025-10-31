@@ -33,7 +33,7 @@ with st.sidebar:
   body_mass_g = st.slider("body mass in g", float(df.body_mass_g.min()), float(df.body_mass_g.max()),float(df.body_mass_g.mean()))
   data ={
           'island',island,
-          'bill_length_mm',bill_lenght_mm,
+          'bill_length_mm',bill_length_mm,
           'bill_depth_mm',bill_depth_mm,
           'flipper_length_mm',flipper_length_mm,
           'body_mass_g',body_mass_g,
