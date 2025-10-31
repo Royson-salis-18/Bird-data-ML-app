@@ -30,6 +30,6 @@ with st.sidebar:
   bill_length_mm = st.slider("bill lenght in mm", df.bill_length_mm.min(),df.bill_length_mm.max(),df.bill_length_mm.mean())
   bill_depth_mm = st.slider("bill depth in mm", df.bill_depth_mm.min(),df.bill_depth_mm.max(),df.bill_depth_mm.mean())
   flipper_length_mm = st.slider("flipper lenght in mm", df.flipper_length_mm.min(),df.flipper_length_mm.max(),df.flipper_length_mm.mean())
-  body_mass_g = st.slider("body mass in g", df.body_mass_g.min(),df.body_mass_g.max(),df.body_mass_g.mean())
+  body_mass_g = st.slider("body mass in g", float(df.body_mass_g.min()),float(df.body_mass_g.max()),float(df.body_mass_g.mean()))
 
 
