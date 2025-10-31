@@ -1,10 +1,10 @@
-# 📦 Streamlit App Starter Kit 
+# Bird data Ml model and visualization 
 ```
 ⬆️ (Replace above with your app's name)
 ```
 
-Description of the app ...
 
+Machine Learning Visualisation using streamlit
 ## Demo App
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
