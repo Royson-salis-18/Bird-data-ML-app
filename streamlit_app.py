@@ -21,7 +21,7 @@ with st.expander('Data visualization'):
   st.write('scatter-plot')
   st.scatter_chart(data=df,x="bill_length_mm",y="body_mass_g",color='species')
 
-with st.sidebar
+with st.sidebar:
   st.header("input features")
   island = st.selectbox(
       "island",
