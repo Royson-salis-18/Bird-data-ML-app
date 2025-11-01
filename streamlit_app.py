@@ -85,7 +85,7 @@ prediction_prob = clf.predict_proba(input_row)
 
 df_prediction_prob = pd.DataFrame(prediction_prob)
 df_prediction_prob.columns = ["Adelie","Chinstrap","Gentoo"]
-df_prediction_prob
+
 
 #display predicted species
 st.subheader('predicted species')
