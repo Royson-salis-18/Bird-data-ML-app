@@ -79,7 +79,7 @@ clf = RandomForestClassifier()
 clf.fit(X,y)
 
 #apply model to make prediciton
-prediction = clf.predict(X)
-prediction_prob = clf.predict_proba(X)
+prediction = clf.predict(input_row)
+prediction_prob = clf.predict_proba(Input_row)
 
 prediction_prob
