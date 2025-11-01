@@ -15,7 +15,7 @@ with st.expander("Data"):
   X_raw
 
   st.write('**y-unique-values**')
-  y_raw = df.species.unique()
+  y_raw = df.species
   y_raw
 
 with st.expander('Data visualization'):
