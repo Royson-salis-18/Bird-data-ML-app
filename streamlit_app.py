@@ -1,6 +1,6 @@
 import pandas as pd 
 import streamlit as st
-
+from sklearn.ensemble import RandomForestClassifier
 st.title('ML visualization app')
 
 st.write('Penguin Species prediction model')
@@ -53,6 +53,8 @@ with st.expander( 'input features'):
 #encode x
 encode = ['island','sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+
+X = df_penguins[1:]
 input_row = df_penguins[:1]
 
 #encode y
@@ -71,3 +73,13 @@ with st.expander('data preparation'):
   st.write('**encoded y**')
   y
 
+#ml model training and inference
+#train the ml model
+clf = RandomForestClassifier
+clf = fit(X,y)
+
+#apply model to make prediciton
+prediction = clf.predict(X)
+prediction_prob = clf.predict_proba(X)
+
+prediction_prob
