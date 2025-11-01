@@ -44,7 +44,7 @@ with st.sidebar:
 
 #encode x
 encode = ['island','sex']
-df_penguin = pd.get_dummies(input_penguins, prefix=encode)
+df_penguins = pd.get_dummies(input_penguins, prefix=encode)
 input_row = df_penguins[:1]
 
 #encode y
