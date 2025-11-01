@@ -10,12 +10,12 @@ with st.expander("Data"):
   df
 
   st.write('**X-all-values-from-dataset**')
-  X = df.drop('species', axis=1)
-  X
+  X_raw = df.drop('species', axis=1)
+  X_raw
 
   st.write('**y-unique-values**')
-  y = df.species.unique()
-  y
+  y_raw = df.species.unique()
+  y_raw
 
 with st.expander('Data visualization'):
   st.write('scatter-plot')
@@ -42,5 +42,24 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df,X],axis=0)
 
-input_df
-input_penguins
+#encode x
+encode = ['island','sex']
+df_penguin = pd.get_dummies(input_penguins, prefix=encode)
+input_row = df_penguins[:1]
+
+#encode y
+target_mapper = {'Adelie':0,
+                 'Chinstrap':1,
+                 'Gentoo':2}
+def target encode(val)
+  return target_mapper[val]
+
+with st.expander( 'input features'):
+  st.write('**input penguin**')
+  input_df
+  st.write('**combined penguins data**')
+  input_penguins
+  st.write('**encode input penguin**')
+  input_row
+
+
