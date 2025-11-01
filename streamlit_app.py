@@ -4,6 +4,7 @@ import streamlit as st
 st.title('ML visualization app')
 
 st.write('Penguin Species prediction model')
+
 with st.expander("Data"):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
@@ -21,6 +22,7 @@ with st.expander('Data visualization'):
   st.write('scatter-plot')
   st.scatter_chart(data=df,x="bill_length_mm",y="body_mass_g",color='species')
 
+#input features
 with st.sidebar:
   st.header("input features")
   island = st.selectbox(
@@ -41,7 +43,13 @@ with st.sidebar:
         }
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df,X_raw],axis=0)
-
+  
+with st.expander( 'input features'):
+  st.write('**input penguin**')
+  input_df
+  st.write('**combined penguins data**')
+  input_penguins
+#data prep
 #encode x
 encode = ['island','sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
@@ -54,12 +62,11 @@ target_mapper = {'Adelie':0,
 def target_encode(val):
   return target_mapper[val]
 
-with st.expander( 'input features'):
-  st.write('**input penguin**')
-  input_df
-  st.write('**combined penguins data**')
-  input_penguins
-  st.write('**encode input penguin**')
-  input_row
+y = y_raw.apply(target_encode)
 
+with st.expander('data preparation'):
+  st.write('**encoded X (input penguin)**')
+  input_row
+  st.write('**encoded y**')
+  y
 
